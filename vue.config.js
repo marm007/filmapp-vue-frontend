@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/yt_clone/'
+    publicPath: '/filmapp-vue-frontend/'
 };

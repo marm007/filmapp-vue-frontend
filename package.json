@@ -1,7 +1,8 @@
 {
-  "name": "youtube-clone-zti-frontend",
+  "name": "filmapp-vue-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://marm007.github.io/filmapp-react-frontend",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
