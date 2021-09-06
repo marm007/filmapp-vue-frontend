@@ -62,7 +62,6 @@
         },
         methods: {
             onPlaylistThumbnailLoaded(value, index) {
-                console.log(value);
                 this.playlists[index].thumbnail = value;
                 this.playlists[index].loaded = true;
                 this.playlists = this.playlists.filter(_playlist => _playlist.id !== null);
@@ -100,7 +99,7 @@
                     this.playlists = this.playlists.filter(_playlist => _playlist.films.length > 0);
                 })
                 .catch(error => {
-                    console.log(error);
+                    console.error(error);
                     this.error = "Failed to load playlists"
                 })
                 .finally(() => this.isLoading = false)

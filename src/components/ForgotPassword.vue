@@ -99,12 +99,10 @@
 
                     await backendService.forget(this.form)
                     .then((response) => {
-                        console.log(response);
                         this.success = response.data;
                     })
                     .catch((error) => {
-                        console.log(error.response)
-                        console.log(error);
+                        console.error(error);
                         if (error.response)
                             this.error = error.response.data.message;
                         else

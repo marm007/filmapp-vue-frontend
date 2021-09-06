@@ -143,7 +143,7 @@
                             this.handleClose();
                         })
                         .catch(error => {
-                            console.log(error);
+                            console.error(error);
                             this.error = "Failed to login"
                             this.isLoggingIn = false
                         });

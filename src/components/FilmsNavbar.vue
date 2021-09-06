@@ -62,8 +62,6 @@
                 this.loadFilms(newFilmId);
             },
             isLoading(newIsLoading) {
-                console.log(newIsLoading);
-
             },
         },
         data() {
@@ -76,7 +74,6 @@
         },
 
         mounted() {
-            console.log('addaladladlld')
             EventBus.$on('logged', (arg) => {
                 if (arg === 'in') {
                     this.isLoggedIn = true;
@@ -84,11 +81,9 @@
                     this.isLoggedIn = false;
                 }
             });
-            console.log(this)
         },
 
         async created() {
-            console.log('zczxcxzcxzczxc')
 
             this.isLoggedIn = isLoggedIn();
 
@@ -103,13 +98,12 @@
 
                 await service.getAllFilms()
                     .then(response => {
-                        console.log('daladldal')
                         this.films = response.data.filter(_film => _film.id !== id);
                         this.$emit('filmsLoaded')
                         this.isLoading = false;
                     })
                     .catch(error => {
-                        console.log(error);
+                        console.error(error);
                         this.error = "Failed to load films";
 
                         this.isLoading = false;

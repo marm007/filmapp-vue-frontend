@@ -146,9 +146,9 @@
                     })
                     .catch(error => {
                         if (error.response) {
-                            console.log(error.response);
+                            console.error(error.response);
                         } else {
-                            console.log(error);
+                            console.error(error);
                         }
                     })
                     .finally(() => this.isLoading = false);
@@ -168,10 +168,10 @@
                     })
                     .catch(error => {
                         if (error.response) {
-                            console.log(error.response);
+                            console.error(error.response);
                             this.error = error.response.data.message;
                         } else {
-                            console.log(error);
+                            console.error(error);
                             this.error = "Cannont create playlist!";
                         }
                     }).finally(() => {
@@ -190,7 +190,6 @@
                 const _form = {films: _films, removeFilms: !remove};
                 await service.updatePlaylist(id, _form)
                     .then(response => {
-                        console.log(response);
                         EventBus.$emit('playlist_changed', remove ? 'add' : 'remove', response.data);
                         EventBus.$emit('playlist_changed_profile', response.data);
                         const value = remove ? 'added to' : 'removed from';
@@ -199,9 +198,9 @@
                     })
                     .catch(error => {
                         if (error.response) {
-                            console.log(error.response);
+                            console.error(error.response);
                         } else {
-                            console.log(error);
+                            console.error(error);
                         }
                     });
             },
@@ -209,15 +208,13 @@
                 const _form = {isPublic: !_public};
                 await service.updatePlaylist(id, _form)
                     .then(response => {
-                        console.log(response);
-                        console.log(this.playlists[this.playlists.findIndex(el => el.id === id)]);
                         this.playlists[this.playlists.findIndex(el => el.id === id)].public = response.data.public;
                     })
                     .catch(error => {
                         if (error.response) {
-                            console.log(error.response);
+                            console.error(error.response);
                         } else {
-                            console.log(error);
+                            console.error(error);
                         }
                     });
             }

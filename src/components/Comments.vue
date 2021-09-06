@@ -142,7 +142,7 @@
                         this.isLoading = false
                     })
                     .catch(error => {
-                        console.log(error);
+                        console.error(error);
                         this.error = "Failed to load comments"
                         this.isLoading = false
                     });
@@ -191,11 +191,10 @@
 
                 await service.removeComment(id)
                     .then(response => {
-                        console.log(response);
                         this.comments = this.comments.filter(_comment => _comment.id !== id);
                     })
                     .catch(error => {
-                        console.log(error);
+                        console.error(error);
                     });
             },
             async handleSort(sort) {
@@ -207,9 +206,9 @@
                     })
                     .catch(error => {
                         if (error.response) {
-                            console.log(error.response);
+                            console.error(error.response);
                         } else {
-                            console.log(error);
+                            console.error(error);
                         }
                     })
                     .finally(() => this.dir *= -1);

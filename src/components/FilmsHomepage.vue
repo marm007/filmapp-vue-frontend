@@ -70,7 +70,7 @@
                     this.films = response.data
                 })
                 .catch(error => {
-                    console.log(error)
+                    console.error(error)
                     this.error = "Failed to load todos"
                 })
                 .finally(() => this.isLoading = false)

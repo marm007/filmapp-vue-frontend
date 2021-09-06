@@ -136,13 +136,12 @@
                 formData.append('thumbnail', this.form.thumbnail);
                 await backendService.createNewFilm(formData)
                     .then(response => {
-                        console.log(response);
                         this.$router.push(`${publicPath}films/${response.data.id}`)
                     })
                     .catch(error => {
                         if (error.response && error.response.status !== 401) {
                             if (error.response) {
-                                console.log(error.response);
+                                console.error(error.response);
                                 if (error.response.data.errors) {
                                     this.errorMessage = error.response.data.errors[0];
                                 } else {
@@ -150,12 +149,12 @@
                                 }
                                 this.showError = true;
                             } else {
-                                console.log(error);
+                                console.error(error);
                                 this.errorMessage = "Something went wrong.";
                                 this.showError = true;
                             }
                         } else {
-                            console.log(error);
+                            console.error(error);
                             this.errorMessage = '';
                             this.showError = false;
                         }

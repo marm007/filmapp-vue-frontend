@@ -146,7 +146,7 @@
                     });
                 })
                 .catch(error => {
-                    console.log(error);
+                    console.error(error);
                     this.error = "Failed to load playlists profile"
                 });
 
@@ -155,7 +155,7 @@
                     this.films = response.data
                 })
                 .catch(error => {
-                    console.log(error);
+                    console.error(error);
                     this.error = "Failed to load films profile"
                 })
                 .finally(() => this.isLoading = false);
@@ -183,7 +183,6 @@
         methods: {
 
             onPlaylistThumbnailLoaded(value, index) {
-                console.log(value);
                 this.playlists[index].thumbnail = value;
                 this.playlists[index].loaded = true;
                 this.playlists = this.playlists.filter(_playlist => _playlist.id !== null);
@@ -207,9 +206,9 @@
                     })
                     .catch(error => {
                         if (error.response) {
-                            console.log(error.response);
+                            console.error(error.response);
                         } else {
-                            console.log(error);
+                            console.error(error);
                         }
                     });
             },
@@ -229,9 +228,9 @@
                     })
                     .catch(error => {
                         if (error.response) {
-                            console.log(error.response);
+                            console.error(error.response);
                         } else {
-                            console.log(error);
+                            console.error(error);
                         }
                     });
             },

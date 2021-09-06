@@ -129,13 +129,12 @@
                     await backendService.getAllFilmsAndFilterAndSort('title_starts=' + value)
                         .then(response => {
                             this.isLoading = false;
-                            console.log('response.data)');
-                            console.log(response.data);
+                       
                             this.results = response.data;
                             this.isOpen = this.results.length > 0;
                         })
                         .catch(error => {
-                            console.log(error);
+                            console.error(error);
                             this.error = "Failed to load films"
                         })
                         .finally(() => this.isLoading = false)

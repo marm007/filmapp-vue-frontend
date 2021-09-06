@@ -69,7 +69,6 @@ export const authHeader = () => {
     let token = localStorage.getItem('token');
     // const payload = jwtDecode(token);
 
-    console.log(token);
     if (token) {
         return {'Authorization': 'Bearer ' + token};
     } else {

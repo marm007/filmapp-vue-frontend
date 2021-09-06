@@ -179,7 +179,7 @@
                         this.films = response.data
                     })
                     .catch(error => {
-                        console.log(error);
+                        console.error(error);
                         this.error = "Failed to load films"
                     })
                     .finally(() => this.isLoading = false)

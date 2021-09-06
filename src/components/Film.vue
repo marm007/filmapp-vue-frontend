@@ -133,7 +133,7 @@
                         this.film = response.data;
                     })
                     .catch(error => {
-                        console.log(error);
+                        console.error(error);
                         this.error = "Failed to load film"
                     });
 
@@ -158,7 +158,7 @@
                             }
                         })
                         .catch(error => {
-                            console.log(error.response);
+                            console.error(error.response);
                             this.error = "Failed to load my data"
                         })
                     .finally(() => this.content.loading = false );
@@ -178,7 +178,7 @@
                         }
                     })
                     .catch(error => {
-                        console.log(error);
+                        console.error(error);
                         this.error = "Failed to load film"
                     });
             },
@@ -212,7 +212,7 @@
 
             const width = window.innerWidth || document.documentElement.clientWidth ||
                 document.body.clientWidth;
-            console.log(width)
+
             this.width = width;
 
             this.isLoggedIn = isLoggedIn();
@@ -226,7 +226,7 @@
                     this.checkUserLikes();
                 })
                 .catch(error => {
-                    console.log(error);
+                    console.error(error);
                     this.$router.back();
                     this.error = "Failed to update film"
                 });

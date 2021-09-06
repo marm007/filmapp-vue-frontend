@@ -145,11 +145,11 @@
                     .catch((error) => {
                         if (error.response) {
                             this.error = error.response.data.message;
-                            console.log(error.response);
+                            console.error(error.response);
                         } else {
                             this.error = "Failed to register";
                         }
-                        console.log(error);
+                        console.error(error);
                         this.isRegistering = false;
                     })
                 });

@@ -113,7 +113,6 @@
                 await service.getPlaylistFilms(id)
                     .then(response => {
                         this.films = response.data;
-                        console.log(this.films);
                         this.films.forEach(_film => {
                             _film.thumbnails = [];
                             _film.thumbnails.push(`${this.apiUrl}films/${_film.id}/thumbnail/preview`);
@@ -127,7 +126,7 @@
                         this.currentFilmIndex = this.films.findIndex(_film => _film.id === this.content.filmId);
                     })
                     .catch(error => {
-                        console.log(error);
+                        console.error(error);
                         this.error = "Failed to load films"
                     }).finally(() => {
                     this.isLoading = false;
@@ -138,7 +137,7 @@
                     .then(response => {
                         this.playlist = response.data;})
                     .catch(error => {
-                        console.log(error);
+                        console.error(error);
                         this.playlist = null;
                         this.error = "Failed to load films"
                     });
@@ -156,9 +155,9 @@
                     })
                     .catch(error => {
                         if (error.response) {
-                            console.log(error.response);
+                            console.error(error.response);
                         } else {
-                            console.log(error);
+                            console.error(error);
                         }
                     });
             },
@@ -176,9 +175,9 @@
                     })
                     .catch(error => {
                         if (error.response) {
-                            console.log(error.response);
+                            console.error(error.response);
                         } else {
-                            console.log(error);
+                            console.error(error);
                         }
                     });
             },
@@ -186,7 +185,6 @@
         watch: {
             filmVideoHeight(newFilmVideoHeight) {
                 this.sizes.height = newFilmVideoHeight;
-                console.log(newFilmVideoHeight)
                 if (this.isLoading === false && this.playlist)
                     this.sizes.headerHeight = this.$refs.playlistHeader.clientHeight;
             },
