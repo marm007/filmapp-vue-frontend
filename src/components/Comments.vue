@@ -190,7 +190,7 @@
             async handleDeleteComment(id) {
 
                 await service.removeComment(id)
-                    .then(response => {
+                    .then(() => {
                         this.comments = this.comments.filter(_comment => _comment.id !== id);
                     })
                     .catch(error => {

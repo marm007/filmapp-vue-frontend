@@ -61,7 +61,7 @@
             filmId(newFilmId) {
                 this.loadFilms(newFilmId);
             },
-            isLoading(newIsLoading) {
+            isLoading() {
             },
         },
         data() {

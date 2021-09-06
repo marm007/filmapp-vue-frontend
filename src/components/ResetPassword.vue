@@ -96,7 +96,7 @@
                     this.isReseting = true;
 
                     await backendService.reset(this.$route.params.token, this.form)
-                    .then((response) => {
+                    .then(() => {
                         this.messages.success = "Password reseted succesfully! Redirectiong to login!";
                         setTimeout(() => this.$router.push(`${publicPath}login`), 1500 );
                     })
