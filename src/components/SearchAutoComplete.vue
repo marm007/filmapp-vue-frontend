@@ -32,7 +32,7 @@
                         <md-avatar
                                 class="mr-3" variant="primary">
                             <img :src="`${apiUrl}films/${result.id}/thumbnail/preview`"
-                                 :alt="`Film added by ${result.authorUsername}`">
+                                 alt="">
                         </md-avatar>
                     </b-col>
                     <b-col cols="10" sm="10">

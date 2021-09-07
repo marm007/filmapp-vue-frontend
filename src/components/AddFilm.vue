@@ -1,6 +1,6 @@
 <template>
-    <b-form>
-        <b-row class="mt-4 mr-2 ml-2" sm="12">
+    <b-form >
+        <b-row sm="12">
             <b-col class="mb-4" lg="5" sm="6">
 
                 <b-col class="mb-4 ml-auto mr-auto" cols="10" lg="10" sm="12">

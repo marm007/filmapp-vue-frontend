@@ -1,5 +1,5 @@
 <template>
-    <b-col class="p-0 mb-5" v-if="isLoading === false && playlist" :style="`height:${sizes.height}px`"
+    <b-col class="p-0 mb-5 pr-3 pl-3 pl-md-0 pr-md-4" v-if="isLoading === false && playlist" :style="`height:${sizes.height}px`"
            style="overflow-y: scroll; overflow-x: hidden">
         <b-col class="playlist-remove-container pt-2 pb-2 playlist-header" sm="12" ref="playlistHeader">
             <b-row class="m-0 p-0 d-flex">
@@ -48,7 +48,7 @@
                         <b-col class="pr-2 pl-2" cols="6" sm="6">
                             <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
                                 <img :src="film.thumbnail"
-                                     :alt="`Film added by ${film.authorUsername}`"
+                                     alt=""
                                      class="image embed-responsive-item"/>
                                 <font-awesome-icon class="middle" icon="play"/>
                             </div>

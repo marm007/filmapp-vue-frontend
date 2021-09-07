@@ -23,7 +23,7 @@
                 <b-row :key="`_playlist-${index}`"
                        class="d-flex ml-2"
                        v-for="(_playlist, index) in playlists">
-                    <b-col class="m-0 p-0" cols="10" sm="10">
+                    <b-col class="m-0 p-0" cols="8" sm="8">
                         <b-form-checkbox
                                 :checked="_playlist.films.includes(filmId)"
                                 class="mt-1 mb-1 d-flex"
@@ -34,7 +34,7 @@
                         </span>
                         </b-form-checkbox>
                     </b-col>
-                    <b-col class="m-0 p-0 " cols="2" sm="2">
+                    <b-col class="m-0 p-0" cols="4" sm="4">
                         <md-button
                                 aria-label="Change publicity"
                                 class="align-self-center mr-3 d-flex align-items-center justify-content-center; "

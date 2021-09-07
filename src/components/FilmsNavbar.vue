@@ -1,5 +1,5 @@
 <template>
-    <b-col class="p-lg-0 p-md-0 p-4" v-show="isLoading === false">
+    <b-col class="p-lg-0 pr-lg-4 p-md-0 pr-md-4 p-3" v-show="isLoading === false">
         <b-col :key="`_film-${index}`"
                class="film-preview-holder p-0 mb-4 m-container"
                v-for="(_film, index) in films">
@@ -9,7 +9,7 @@
                     <b-col cols="7" sm="7" class="p-0 pr-4">
                         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
                             <img :src="`${apiUrl}films/${_film.id}/thumbnail/poster`"
-                                 :alt="`Film added by ${_film.authorUsername}`"
+                                 alt=""
                                  class="image embed-responsive-item"/>
                             <font-awesome-icon class="middle" icon="play"/>
                         </div>

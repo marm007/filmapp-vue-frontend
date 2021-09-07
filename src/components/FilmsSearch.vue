@@ -47,18 +47,18 @@
 
         <b-row v-if="isLoading === false">
             <b-col v-on:click="handleFilmChooseFilmsSearch(film.id)"
-                    :key="`film-${index}`" class="mt-4 film-preview-holder m-0 mb-1 m-container text-justify" cols="12"
+                    :key="`film-${index}`" class="film-preview-holder m-0 mb-1 m-container text-justify" cols="12"
                    lg="8" siz v-for="(film, index) in films">
                 <b-row class="d-sm-none mb-4">
-                    <b-col cols="8" sm="4">
+                    <b-col cols="6" sm="6">
                         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
                             <img :src="`${apiUrl}films/${film.id}/thumbnail/preview`"
-                                 :alt="`Film added by ${film.authorUsername}`"
+                                 alt=""
                                  class="image embed-responsive-item"/>
                             <font-awesome-icon class="middle" icon="play"/>
                         </div>
                     </b-col>
-                    <b-col class="p-0" cols="4" sm="8">
+                    <b-col class="p-0" cols="6" sm="6">
                         <b-row class="m-0">
                             <b-col class="p-0" cols="8" sm="8">
 
@@ -76,12 +76,12 @@
                     </b-col>
                 </b-row>
 
-                <b-col class="d-none d-sm-inline">
+                <b-col class="d-none d-sm-block p-0 mb-4">
                     <b-row class="style-search">
                         <b-col cols="8" sm="4">
                             <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
                                 <img :src="`${apiUrl}films/${film.id}/thumbnail/preview`"
-                                     :alt="`Film added by ${film.authorUsername}`"
+                                     alt=""
                                      class="image embed-responsive-item"/>
                                 <font-awesome-icon class="middle" icon="play"/>
                             </div>

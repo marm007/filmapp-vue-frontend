@@ -6,7 +6,7 @@
                     <b-navbar-brand>
                         <b-navbar-brand>
                             <img alt="Logo"
-                                 src="https://www.bigstockphoto.com/images/homepage/module-1.jpg"
+                                 src="@/assets/header.png"
                                  style="border-radius: 20px; width: 30px; height: 30px"/>
                         </b-navbar-brand>
                         <p class="d-none d-md-inline" style="cursor: pointer;">FilmApp</p>
