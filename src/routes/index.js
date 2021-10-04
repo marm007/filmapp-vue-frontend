@@ -1,20 +1,20 @@
 import VueRouter from "vue-router";
-import FilmsHomepage from "../components/FilmsHomepage";
-import Login from "../components/Login";
-import Register from "../components/Register";
-import ForgotPassword from "../components/ForgotPassword";
-import ResetPassword from "../components/ResetPassword";
+import { publicPath } from "../../vue.config";
 import AddFilm from "../components/AddFilm";
 import Film from "../components/Film";
+import FilmsHomepage from "../components/FilmsHomepage";
 import FilmsSearch from "../components/FilmsSearch";
+import ForgotPassword from "../components/ForgotPassword";
+import Login from "../components/Login";
 import PlaylistsHomepage from "../components/PlaylistsHomepage";
 import Profile from "../components/Profile";
-import {publicPath} from "../../vue.config";
+import Register from "../components/Register";
+import ResetPassword from "../components/ResetPassword";
 
 export const router = new VueRouter({
     mode: 'history',
     scrollBehavior() {
-        return {x: 0, y: 0};
+        return { x: 0, y: 0 };
     },
     routes: [
         {
@@ -38,8 +38,8 @@ export const router = new VueRouter({
         {
             path: `${publicPath}reset/:token`,
             components: {
-              default: FilmsHomepage,
-              reset: ResetPassword,
+                default: FilmsHomepage,
+                reset: ResetPassword,
             }
 
         },
